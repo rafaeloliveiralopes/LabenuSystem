@@ -35,6 +35,11 @@ app.post("class", async (req: Request, res: Response) => {
       errorCode = 422;
       throw new Error("Escolha entre 'integral' e 'noturno'");
     }
+
+    if (input.data_inicio > input.data_fim) {
+      errorCode = 422;
+      throw new Error("A data de início não pode ser maior que a data fim");
+    }
   } catch (error: any) {
     res.status(errorCode).send({ message: error.message });
   }
