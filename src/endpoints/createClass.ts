@@ -1,10 +1,32 @@
 import { Request, Response } from "express";
 import app from "../app";
+import { Class } from "../models/types";
 
-app.post("turma", async (req: Request, res: Response) => {
-    
+app.post("class", async (req: Request, res: Response) => {
   let errorCode = 400;
   try {
+    const input: Class = {
+      id: req.body.id,
+      nome: req.body.nome,
+      data_inicio: req.body.data_inicio,
+      data_fim: req.body.data_fim,
+      modulo: 0,
+      tipo: req.body.tipo,
+    };
+
+    if (
+      !input.id ||
+      !input.nome ||
+      !input.data_inicio ||
+      !input.data_fim ||
+      !input.modulo ||
+      !input.tipo
+    ) {
+      errorCode = 422;
+      throw new Error(
+        "Verifique se todos os campos foram preenchidos corretamente"
+      );
+    }
   } catch (error: any) {
     res.status(errorCode).send({ message: error.message });
   }
