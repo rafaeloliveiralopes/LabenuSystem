@@ -22,7 +22,6 @@ export const classCreate = async (
       !input.nome ||
       !input.data_inicio ||
       !input.data_fim ||
-      !input.modulo ||
       !input.tipo
     ) {
       errorCode = 422;
