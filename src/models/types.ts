@@ -1,4 +1,4 @@
-enum CLASS_TYPE {
+export enum CLASS_TYPE {
   FULL_TIME = "full-time",
   NIGHT_CLASS = "night-class",
 }

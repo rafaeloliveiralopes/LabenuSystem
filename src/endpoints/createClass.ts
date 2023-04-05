@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import app from "../app";
-import { Class } from "../models/types";
+import { CLASS_TYPE, Class } from "../models/types";
 
 app.post("class", async (req: Request, res: Response) => {
   let errorCode = 400;
@@ -26,6 +26,14 @@ app.post("class", async (req: Request, res: Response) => {
       throw new Error(
         "Verifique se todos os campos foram preenchidos corretamente"
       );
+    }
+
+    if (
+      input.tipo !== CLASS_TYPE.FULL_TIME &&
+      input.tipo !== CLASS_TYPE.NIGHT_CLASS
+    ) {
+      errorCode = 422;
+      throw new Error("Escolha entre 'integral' e 'noturno'");
     }
   } catch (error: any) {
     res.status(errorCode).send({ message: error.message });
