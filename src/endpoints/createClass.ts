@@ -40,6 +40,10 @@ app.post("class", async (req: Request, res: Response) => {
       errorCode = 422;
       throw new Error("A data de início não pode ser maior que a data fim");
     }
+
+    if (input.tipo === CLASS_TYPE.NIGHT_CLASS) {
+      input.nome = input.nome += "-na-night";
+    }
   } catch (error: any) {
     res.status(errorCode).send({ message: error.message });
   }
