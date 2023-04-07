@@ -13,6 +13,6 @@ export type Teacher = {
     nome: string,
     email: string,
     data_nasc: string,
-    especialidades: string[],
+    especialidades: SPECIALITY[],
     turma_id: number
 }
