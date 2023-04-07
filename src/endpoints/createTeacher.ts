@@ -48,6 +48,6 @@ export const teacherCreate = async (req: Request, res: Response): Promise<void> 
         res.status(201).send({ message: `Docente ${input.nome}, criado com sucesso!` })
     } catch (error: any) {
         res.status(errorCode).send({ message: error.message });
-    }
-}
+    };
+};
 
