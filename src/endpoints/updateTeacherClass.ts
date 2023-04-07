@@ -14,7 +14,7 @@ export const moveTeacherToDifferentClass = async (req: Request, res: Response): 
         UPDATE DOCENTE 
         SET turma_id = ${input.turma_id}
         WHERE id = ${input.docente_id}
-        `)
+        `);
         res.status(200).send({ message: "As informações foram atualizadas com sucesso!" })
     } catch (error: any) {
         res.status(errorCode).send({ message: error.message })
