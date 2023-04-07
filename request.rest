@@ -9,3 +9,16 @@ Content-Type: application/json
     "modulo":7,    
     "tipo":"noturno"
 }
+
+###
+POST http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "id":3,
+    "nome":"Eduardo",
+    "email": "eduardo@exemplo.com",
+    "data_nasc":"1990-02-03",
+    "hobbies":["Caminhar", "jogar bola"], 
+    "turma_id":3 
+}

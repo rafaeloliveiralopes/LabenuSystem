@@ -1,7 +1,8 @@
 export type Student = {
     id: number,
     nome: string,
-    email:string,
+    email: string,
     data_nasc: string,
-    hobbies: string[]
+    hobbies: string[],
+    turma_id: number
 }
