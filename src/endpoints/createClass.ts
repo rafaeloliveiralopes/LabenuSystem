@@ -2,10 +2,7 @@ import { Request, Response } from "express";
 import { CLASS_TYPE, Class } from "../models/class";
 import connection from "../data/connection";
 
-export const classCreate = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const classCreate = async (req: Request, res: Response): Promise<void> => {
   let errorCode = 400;
   try {
     const input: Class = {
@@ -14,7 +11,7 @@ export const classCreate = async (
       data_inicio: req.body.data_inicio,
       data_fim: req.body.data_fim,
       modulo: 0,
-      tipo: req.body.tipo,
+      tipo: req.body.tipo
     };
 
     if (
@@ -25,9 +22,7 @@ export const classCreate = async (
       !input.tipo
     ) {
       errorCode = 422;
-      throw new Error(
-        "Verifique se todos os campos foram preenchidos corretamente"
-      );
+      throw new Error("Verifique se todos os campos foram preenchidos corretamente");
     }
 
     if (
