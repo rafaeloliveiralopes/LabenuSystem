@@ -1,7 +1,7 @@
 export enum CLASS_TYPE {
   INTEGRAL = "integral",
   NOTURNO = "noturno",
-};
+}
 
 export type Class = {
   id: number,
@@ -10,4 +10,4 @@ export type Class = {
   data_fim: string,
   modulo: number,
   tipo: CLASS_TYPE
-};
+}
