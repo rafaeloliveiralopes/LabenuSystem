@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Student } from "../models/student";
+import { Student } from "../models/Student";
 import connection from "../data/connection";
 
 export const studentCreate = async (req: Request, res: Response): Promise<void> => {
