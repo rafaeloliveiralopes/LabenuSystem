@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CLASS_TYPE, Class } from "../models/class";
+import { CLASS_TYPE, Class } from "../models/Class";
 import connection from "../data/connection";
 
 export const classCreate = async (req: Request, res: Response): Promise<void> => {
