@@ -35,3 +35,12 @@ Content-Type: application/json
     "especialidades":["REACT", "CSS", "TYPESCRIPT"], 
     "turma_id":3  
 }
+
+### 
+PUT http://localhost:3003/teacher/update
+Content-Type: application/json
+
+{
+    "docente_id":1,
+    "turma_id":2
+}
