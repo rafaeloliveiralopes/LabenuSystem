@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { SPECIALITY, Teacher } from "../models/Teacher";
+import { SPECIALITY, Teacher } from "../models/teacher";
 import connection from "../data/connection";
 
 export const teacherCreate = async (req: Request, res: Response): Promise<void> => {
