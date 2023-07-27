@@ -2,12 +2,12 @@ POST http://localhost:3003/class
 Content-Type: application/json
 
 {
-    "id":5,
-    "nome":"Hawking",
-    "data_inicio": "2022-04-20",
-    "data_fim":"2023-04-20",
-    "modulo":0,    
-    "tipo":"noturno"
+    "id":6,
+    "nome":"Barros",
+    "data_inicio": "2023-03-01",
+    "data_fim":"2024-03-01",
+    "modulo":1,    
+    "tipo":"integral"
 }
 
 ###
