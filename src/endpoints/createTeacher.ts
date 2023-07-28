@@ -25,11 +25,11 @@ export const teacherCreate = async (req: Request, res: Response): Promise<void> 
             throw new Error("Verifique se todos os campos foram preenchidos corretamente");
         }
 
-        const existingTeacher = await connection("DOCENTE")
+        const existingTeacherEmail = await connection("DOCENTE")
             .where("email", input.email)
             .first();
 
-        if (existingTeacher) {
+        if (existingTeacherEmail) {
             throw new Error("Este email já foi cadastrado. Registre um email diferente.");
         }
 
