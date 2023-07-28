@@ -37,7 +37,7 @@ export const studentCreate = async (req: Request, res: Response): Promise<void> 
         )
         `);
 
-       
+    //  Interação para criar ids aleaatórios para cada passatempo   
         for (let hobby of input.hobbies) {
             const idHobby = Math.floor(Math.random() * 1000000);
             await connection.raw(`
