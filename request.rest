@@ -29,9 +29,9 @@ POST http://localhost:3003/teacher
 Content-Type: application/json
 
 {
-    "id":10,
-    "nome":"Rafinha",
-    "email": "fay@exemplo.com",
+    "id":2,
+    "nome":"Madalena",
+    "email": "madalena@exemplo.com",
     "data_nasc":"1975-02-03",
     "especialidades":["REACT", "CSS", "TYPESCRIPT"], 
     "turma_id":3  
