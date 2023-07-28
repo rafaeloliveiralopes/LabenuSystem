@@ -51,6 +51,6 @@ PUT http://localhost:3003/student/update
 Content-Type: application/json
 
 {
-    "estudante_id": 9,
+    "estudante_id": 1,
     "turma_id": 3
 }

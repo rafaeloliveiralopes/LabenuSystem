@@ -10,11 +10,9 @@ export const moveStudentToDifferentClass = async (req: Request, res: Response): 
             turma_id: req.body.turma_id
         };
 
-        await connection.raw(`
-        UPDATE ESTUDANTE 
-        SET turma_id = ${input.turma_id}
-        WHERE id = ${input.estudante_id}
-        `);
+        await connection("ESTUDANTE")
+        .where("id", input.estudante_id)
+        .update({ turma_id: input.turma_id });
 
         const existingStudent = await connection("ESTUDANTE")
         .where("id", input.estudante_id)
