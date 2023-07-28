@@ -16,8 +16,8 @@ POST http://localhost:3003/student
 Content-Type: application/json
 
 {
-    "id":3,
-    "nome":"Eduardo",
+    "id":10,
+    "nome":"Jhonas",
     "email": "eduardo@exemplo.com",
     "data_nasc":"1990-02-03",
     "hobbies":["Caminhar", "jogar bola"], 
