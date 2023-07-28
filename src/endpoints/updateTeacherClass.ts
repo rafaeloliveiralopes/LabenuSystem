@@ -21,7 +21,7 @@ export const moveTeacherToDifferentClass = async (req: Request, res: Response): 
         .first();
 
     if (!existingTeacher) {
-        throw new Error('Esse professor não existe. Por favor, verifique se o ID do professor está correto.');
+        throw new Error("Esse professor não existe. Por favor, verifique se o ID do professor está correto.");
     }
 
         res.status(200).send({ message: "As informações foram atualizadas com sucesso!" })

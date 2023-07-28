@@ -15,8 +15,21 @@ export const moveStudentToDifferentClass = async (req: Request, res: Response): 
         SET turma_id = ${input.turma_id}
         WHERE id = ${input.estudante_id}
         `);
+
+        const existingStudent = await connection("ESTUDANTE")
+        .where("id", input.estudante_id)
+        .first();
+
+        if(!existingStudent){
+            throw new Error("Este aluno não está cadastrado no sistema. Verifique se o ID digitado está correto.");
+        }
+
         res.status(200).send({ message: "As informações foram atualizadas com sucesso!" })
     } catch (error: any) {
+        if(error.message.includes("a foreign key constraint fails")){
+            errorCode = 422;
+            error.message = "Esta turma não existe. Digite um ID existente."
+        }
         res.status(errorCode).send({ message: error.message })
     };
 };
