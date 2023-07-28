@@ -17,6 +17,10 @@ export const moveStudentToDifferentClass = async (req: Request, res: Response): 
         `);
         res.status(200).send({ message: "As informações foram atualizadas com sucesso!" })
     } catch (error: any) {
+        if(error.message.includes("a foreign key constraint fails")){
+            errorCode = 422;
+            error.message = "Esta turma não existe. Digite um ID existente."
+        }
         res.status(errorCode).send({ message: error.message })
     };
 };
