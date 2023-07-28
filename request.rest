@@ -43,7 +43,7 @@ Content-Type: application/json
 
 {
     "docente_id":1,
-    "turma_id":2
+    "turma_id":9
 }
 
 ### Troca aluno de turma
