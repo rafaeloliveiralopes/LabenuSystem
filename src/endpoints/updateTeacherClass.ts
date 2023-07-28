@@ -15,6 +15,15 @@ export const moveTeacherToDifferentClass = async (req: Request, res: Response): 
         SET turma_id = ${input.turma_id}
         WHERE id = ${input.docente_id}
         `);
+
+        const existingTeacher = await connection("DOCENTE")
+        .where("id", input.docente_id)
+        .first();
+
+    if (!existingTeacher) {
+        throw new Error('Esse professor não existe. Por favor, verifique se o ID do professor está correto.');
+    }
+
         res.status(200).send({ message: "As informações foram atualizadas com sucesso!" })
     } catch (error: any) {
         if (error.message.includes("a foreign key constraint fails")) {
