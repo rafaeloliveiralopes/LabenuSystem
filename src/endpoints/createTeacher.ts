@@ -23,31 +23,25 @@ export const teacherCreate = async (req: Request, res: Response): Promise<void> 
         ) {
             errorCode = 422;
             throw new Error("Verifique se todos os campos foram preenchidos corretamente");
-        };
+        }
 
-        await connection.raw(`
-        INSERT INTO DOCENTE(id, nome, email, data_nasc, turma_id)
-        VALUES(
-            ${input.id},
-            "${input.nome}",
-            "${input.email}",
-            "${input.data_nasc}",
-            ${input.turma_id}
-        )
-        `);
+        await connection("DOCENTE").insert({
+            id: input.id,
+            nome: input.nome,
+            email: input.email,
+            data_nasc: input.data_nasc,
+            turma_id: input.turma_id
+        });
 
         for (let especialidade of input.especialidades) {
-            await connection.raw(`
-            INSERT INTO DOCENTE_ESPECIALIDADE(docente_id, especialidade_id)
-            VALUES(
-                ${input.id},
-                ${SPECIALITY[especialidade]}
-            )
-            `);
-        };
-        res.status(201).send({ message: `Docente ${input.nome}, criado com sucesso!` })
+            await connection("DOCENTE_ESPECIALIDADE").insert({
+                docente_id: input.id,
+                especialidade_id: SPECIALITY[especialidade]
+            });
+        }
+
+        res.status(201).send({ message: `Docente ${input.nome}, criado com sucesso!` });
     } catch (error: any) {
         res.status(errorCode).send({ message: error.message });
-    };
+    }
 };
-
