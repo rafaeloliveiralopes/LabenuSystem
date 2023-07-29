@@ -1,34 +1,34 @@
 # Cria uma nova turma
-POST http://localhost:3003/class
+POST https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app/class
 Content-Type: application/json
 
 {
-    "id":6,
-    "nome":"Barros",
-    "data_inicio": "2023-03-01",
-    "data_fim":"2024-03-01",
-    "modulo":1,    
+    "id":7,
+    "nome":"Tesla",
+    "data_inicio": "2024-04-01",
+    "data_fim":"2025-04-01",
+    "modulo":0,    
     "tipo":"integral"
 }
 
 ### Seleciona turmas ativas
-GET http://localhost:3003/class/active
+GET  https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app/class/active
 
 ### Cria um novo estudante
-POST http://localhost:3003/student
+POST  https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app/student
 Content-Type: application/json
 
 {
-    "id":10,
-    "nome":"Jhonas",
-    "email": "eduardo@exemplo.com",
-    "data_nasc":"1990-02-03",
-    "hobbies":["Caminhar", "jogar bola"], 
-    "turma_id":3 
+    "id":8,
+    "nome":"David",
+    "email": "davidr@exemplo.com",
+    "data_nasc":"1980-09-02",
+    "hobbies":["Jogar bola", "Assistir filmes"], 
+    "turma_id":5 
 }
 
 ### Busca estudante através do nome
-GET http://localhost:3003/student?nome=Maria
+GET https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app/student?nome=David
 
 ### Cria um novo professor
 POST http://localhost:3003/teacher
@@ -44,22 +44,22 @@ Content-Type: application/json
 }
 
 ### Lista todos os professores
-GET http://localhost:3003/teacher/all
+GET https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app/teacher/all
 
 ### Troca professor de turma 
-PUT http://localhost:3003/teacher/update
+PUT https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app/teacher/update
 Content-Type: application/json
 
 {
     "docente_id":1,
-    "turma_id":9
+    "turma_id":3
 }
 
 ### Troca aluno de turma
-PUT http://localhost:3003/student/update
+PUT https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app/student/update
 Content-Type: application/json
 
 {
-    "estudante_id": 1,
-    "turma_id": 3
+    "estudante_id": 8,
+    "turma_id": 1
 }
