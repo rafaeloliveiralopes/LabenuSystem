@@ -37,6 +37,9 @@ Content-Type: application/json
     "turma_id":3  
 }
 
+### Lista todos os professores
+GET http://localhost:3003/teacher/all
+
 ### Troca professor de turma 
 PUT http://localhost:3003/teacher/update
 Content-Type: application/json
