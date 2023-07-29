@@ -9,6 +9,9 @@ export const selectStudentByName = async (
   try {
     let nome = req.query.nome as string;
 
+    if (!nome) {
+      throw new Error("Por favor, digite um nome válido.");
+    }
     const result = await connection("ESTUDANTE").where(
       "nome",
       "LIKE",
