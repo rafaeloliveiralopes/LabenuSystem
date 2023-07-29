@@ -1,4 +1,5 @@
 import app from "./app";
+import { Request, Response } from "express";
 import { classCreate } from "./endpoints/createClass";
 import { studentCreate } from "./endpoints/createStudent";
 import { teacherCreate } from "./endpoints/createTeacher";
@@ -18,3 +19,8 @@ app.get("/student", selectStudentByName);
 app.post("/teacher", teacherCreate);
 app.put("/teacher/update", moveTeacherToDifferentClass);
 app.get("/teacher/all", listAllTeachers);
+
+// Teste de deploy
+app.get("/", (req: Request, resp: Response) => {
+  resp.send("Depoyed!");
+});
