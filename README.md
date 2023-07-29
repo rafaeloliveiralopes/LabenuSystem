@@ -5,7 +5,7 @@
 ## Requisitos Funcionais Básicos
 
 - ✅ Criar turma
-- [ ] Buscar turmas ativas
+- ✅ Buscar turmas ativas
 - ✅ Mudar turma de módulo  
 - ✅ Criar estudante
 - ✅ Buscar estudantes através do nome
