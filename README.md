@@ -13,8 +13,6 @@
 - ✅ Criar docente
 - ✅ Buscar todas as pessoas docentes
 - ✅ Mudar docente de turma
-- ✅ Criar estudante
-- ✅ Criar estudante
   
 ## Stack e Ferramentas Utilizadas
 
