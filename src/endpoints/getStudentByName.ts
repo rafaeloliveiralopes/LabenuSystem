@@ -12,6 +12,11 @@ export const selectStudentByName = async (
     if (!nome) {
       throw new Error("Por favor, digite um nome válido.");
     }
+
+    if (!/^([a-zA-ZáÁéÉíÍóÓúÚãÃõÕçÇ\s]+)$/.test(nome)) {
+      throw new Error("Digite um nome válido contendo apenas letras.");
+    }
+
     const result = await connection("ESTUDANTE").where(
       "nome",
       "LIKE",

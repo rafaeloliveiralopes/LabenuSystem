@@ -25,7 +25,7 @@ Content-Type: application/json
 }
 
 ### Busca estudante através do nome
-GET http://localhost:3003/student?nome
+GET http://localhost:3003/student?nome=Maria
 
 ### Cria um novo professor
 POST http://localhost:3003/teacher
