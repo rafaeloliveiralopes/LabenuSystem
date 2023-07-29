@@ -11,6 +11,9 @@ Content-Type: application/json
     "tipo":"integral"
 }
 
+### Seleciona turmas ativas
+GET http://localhost:3003/class/active
+
 ### Cria um novo estudante
 POST http://localhost:3003/student
 Content-Type: application/json
