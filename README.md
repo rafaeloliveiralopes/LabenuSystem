@@ -38,7 +38,7 @@ URL: https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app
 
 ## Documentação da API
 
-A documentação da API foi feita com o Postman e pode ser acessada pelo url:
+A documentação da API foi feita com o Postman e pode ser acessada pela url:
 
 https://documenter.getpostman.com/view/22348177/2s9XxtyFR2
 
