@@ -1,6 +1,13 @@
-# LabenuSystem
+# Labenu System
+![image](https://github.com/rafix923/LabenuSystem/assets/99361183/fa0a79b3-54cc-4a29-b946-93b3e1d37154)
 
 ## Sobre o Projeto
+
+Aplicação backend, criada para representar o básico da organização Labenu, onde criei API REST para cadastrar alunos e docentes, criar turma e movimentar alunos e docentes entre turmas. 
+
+## Modelagem de referência
+
+![image](https://github.com/rafix923/LabenuSystem/assets/99361183/19d80137-0ece-40b8-b9af-0ca19236c547)
 
 ## Requisitos Funcionais Básicos
 
@@ -27,10 +34,13 @@
 
 O deploy do projeto foi realizado utilizando a Vercel
 
-URL do projeto em produção: 
+URL: https://labenu-system-backend-ofz0f7s54-rafix923.vercel.app
 
 ## Documentação da API
 
+A documentação da API foi feita com o Postman e pode ser acessada pelo url:
+
+https://documenter.getpostman.com/view/22348177/2s9XxtyFR2
 
 ## Passos para rodar o projeto localmente
   
@@ -40,16 +50,10 @@ Clone o projeto via HTTPS
   git clone https://github.com/rafix923/LabenuSystem.git
 ```
 
-Entre no diretório do projeto
+Entre no diretório raíz do projeto
 
 ```bash
--  cd 
-```
-
-Acesse o repositório raiz baixado
-
-```bash
-  cd 
+-  cd LabenuSystem
 ```
 
 Instale as dependências necessárias para esse projeto
@@ -61,7 +65,7 @@ Instale as dependências necessárias para esse projeto
 Inicie o servidor
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
 ## Desenvolvedor
